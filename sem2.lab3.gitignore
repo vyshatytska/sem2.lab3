@@ -1,0 +1,53 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace lab._3
+{
+    class Program
+    {
+        static void Main(string[] args)
+		{ 
+	   int k, N;
+
+		double P;
+
+			Console.WriteLine("k = "); k = Convert.ToInt32(Console.ReadLine());
+			Console.WriteLine("N = "); N = Convert.ToInt32(Console.ReadLine());
+
+			P = 1;
+            k = N;
+			while (k <= 25)
+			{
+				P *= Math.Sqrt(1 + (N / k));
+                k++;
+			}
+	Console.WriteLine("P = " + P);
+			P = 1;
+			k = N;
+			do
+			{
+				P *= Math.Sqrt(1 + (N / k));
+			k++;
+
+			} while (k <= 25) ;
+Console.WriteLine("P = " + P);
+
+P = 1;
+for (k = N; k <= 25; k++)
+			{
+				P *= Math.Sqrt(1 + (N / k));
+			}
+Console.WriteLine("P = " + P);
+			P = 1;
+			for (k = 25; k >= N; k--)
+			{
+				P *= Math.Sqrt(1 + (N / k));
+			}
+			Console.WriteLine("P = " + P);
+
+		}
+	}
+}
